@@ -1,6 +1,11 @@
 <?php
  $query="SELECT * FROM newsview WHERE deleted=0 ORDER BY news_id DESC";
- if(isset($_POST['search']))$query="SELECT * FROM newsview WHERE headline LIKE ('%{$_POST['search']}%')";
+ if(isset($_POST['search']))
+ {
+    $search = htmlspecialchars($_POST['search']);
+    $query="SELECT * FROM newsview WHERE headline LIKE ('%{$search}%')";
+ }
+    
  
  $result=$db->query($query);
  if($db->num_rows($result)>0)

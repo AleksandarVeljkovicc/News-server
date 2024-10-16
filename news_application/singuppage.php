@@ -57,10 +57,8 @@ if(login())
 		<input  class="controls <?php if(isset($errors['last_name'])) {echo " errors"; Log::write("logs/".date("Y-m-d")."_singup.log", $errors['last_name'] . " - {$_SERVER['REMOTE_ADDR']}");} ?>"
 		 id="last_name" type="text" name="last_name" placeholder="Last name"  value="<?php if(isset($lastname)){echo $lastname;}?>">
 
-		<!--<input  class="controls <?php// if(isset($errors['country'])) {echo " errors"; Log::write("logs/".date("Y-m-d")."_singup.log", $errors['country'] . " - {$_SERVER['REMOTE_ADDR']}");} ?>"
-		 id="country" type="text" name="country" placeholder="Country" value="<?php// if(isset($country)){echo $country;}?>">-->
 
-		 <select id="country" name="country" <?php if(isset($errors['country'])) {echo "class='errors'";}?>>
+		 <select id="country" name="country" <?php if(isset($errors['country'])) {echo "class='errors'"; Log::write("logs/".date("Y-m-d")."_singup.log", $errors['country'] . " - {$_SERVER['REMOTE_ADDR']}");}?>>
 		 		<option value="0" selected disabled hidden>Country</option>
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>

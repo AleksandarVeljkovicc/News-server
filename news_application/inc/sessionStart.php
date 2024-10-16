@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('inc/requiredFiles.php');
+require_once('requiredFiles.php');
 $db=new Db();
 if(!$db->connect()){
     echo "Connection failed!";

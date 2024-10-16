@@ -2,7 +2,7 @@
 
                     if(isset($_GET['news_id']))
                     {
-                        $news_id=$_GET['news_id'];
+                        $news_id=htmlspecialchars($_GET['news_id']);
 
                         $query="UPDATE news SET views=views+1 WHERE news_id={$news_id}";
                         $db->query($query);

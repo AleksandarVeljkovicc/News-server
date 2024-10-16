@@ -3,7 +3,7 @@
                       
                        if(isset($_GET['category']))
                        {
-                             $category = $_GET['category'];
+                             $category = htmlspecialchars($_GET['category']);
                              $query="SELECT * FROM newsview WHERE type='{$category}' AND deleted=0 ORDER BY news_id DESC";
                              echo "<h1 class='headline'>{$category}</h1>";
                        }
