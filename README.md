@@ -8,3 +8,4 @@ This website is a news app that has 3 users: logged-in user, not logged-in user,
 
 -The administrator can add comments, remove all the comments, add news, and remove news.
  
+![Screenshot_2](https://github.com/user-attachments/assets/b3be8ac1-0cb0-4d22-9c48-f97306df55a6)
