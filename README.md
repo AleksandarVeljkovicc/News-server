@@ -1,3 +1,4 @@
+# World Wide News
 Dynamic website built using PHP, HTML and CSS, and a little JavaScript.
 
 This website is a news app that has 3 users: logged-in user, not logged-in user, and administrator.
